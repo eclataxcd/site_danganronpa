@@ -1,3 +1,5 @@
+/* ---------- Font Styles ---------- */
+
 .bitter-normal {
   font-family: "Bitter", serif;
   font-optical-sizing: auto;
@@ -12,18 +14,11 @@
   font-style: normal;
 }
 
+/* ---------- Style par balises ---------- */
 
 body {
     margin: 0;
-    background-color: #d6d5c9;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: #b9baa3;
-    height: 70px;
+    background-color: #fef8f8;
 }
 
 a {
@@ -32,41 +27,74 @@ a {
 }
 
 a:hover {
+    color: #e32319;
+}
+
+h2, h1 {
     color: #902923;
+    text-align: center;
+}
+
+p {
+    width: 300px;
     font-size: large;
 }
+
+/* ---------- Style par classes ---------- */ 
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #f0e2e4;
+    height: 70px;
+}
+
+/* Section Intro */ 
 
 .section_intro {
     padding: 50px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .section_intro_text {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 800px;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    padding: 20px;
+    background-color: #fffbfc;
+    text-align: justify;
 }
 
 .section_intro_text_description {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
-.section_jeux {
+/* Section Jeux Et Personnages */ 
+
+.section_jeux, .boite_perso {
     padding: 50px;
-    margin: 0px 100px;
-    box-shadow: 0px 0px 10px 0px #000000;
+    margin: 0px 100px 50px 100px;
+    background-color: #fffbfc;
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
 }
 
-.section_jeux_liste {
+.section_jeux_liste, .liste_perso {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    
+    flex-wrap: wrap;
 }
 
-.section_jeux_carte {
+.section_jeux_carte, .carte {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,16 +106,62 @@ a:hover {
     font-size: 40px;
 }
 
+
+
 .img_jeux {
     width: 300px;
     height: 450px;
 }
 
-h2, h1 {
-    color: #902923;
+.img_jeux:hover {
+animation: shadow-pop-br 0.5s ease-out forwards;
+}
+
+.img_perso {
+
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #a22c29;
+    color: #fff;
+    border-radius: 5px;
+    border: 2px solid #a22c29;
+}
+
+.btn:hover {
+    background-color: #fff;
+    border: 2px solid #a22c29;
+}
+
+/* page personnages */
+
+#spoiler {
+    background-color: #ffebee;
+    border: 2px solid #a22c29;
+    padding: 50px;
+    margin: 50px auto;
+    width: fit-content;
+    font-size: 30px;
     text-align: center;
 }
 
-p {
-    width: 400px;
+.description_perso {
+    width: 700px;
+    margin: 50px auto;
+    text-align: justify;
+}
+
+
+@keyframes shadow-pop-br {
+  0% {
+    box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    box-shadow: 1px 1px #3e3e3e, 2px 2px #3e3e3e, 3px 3px #3e3e3e, 4px 4px #3e3e3e, 5px 5px #3e3e3e, 6px 6px #3e3e3e, 7px 7px #3e3e3e, 8px 8px #3e3e3e;
+    transform: translateX(-8px) translateY(-8px);
+  }
 }
